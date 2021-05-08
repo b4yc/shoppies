@@ -26,6 +26,7 @@ const Search = () => {
   return (
     <div>
       <Form onSubmit={handleSubmit}>
+        <h3>Enter a Movie Name</h3>
         <Form.Input
           placeholder="Search..."
           value={value}

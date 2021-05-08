@@ -9,6 +9,7 @@ import {
   Menu,
   Segment,
   Sidebar,
+  Button,
 } from "semantic-ui-react";
 import { CartContext } from "./components/CartProvider";
 import { clearCart } from "./cartReducer";
@@ -21,15 +22,15 @@ import Cart from "./components/Cart";
 function App() {
   const { cart, dispatch } = useContext(CartContext);
   const [visible, setVisible] = useState(false);
+
+  function toggleVisible() {
+    setVisible(!visible);
+  }
+
   return (
     <Grid columns={1}>
       <Grid.Column>
-        <Header />
-        <Checkbox
-          checked={visible}
-          label={{ children: <code>visible</code> }}
-          onChange={(e, data) => setVisible(data.checked)}
-        />
+        <Header toggle={toggleVisible} />
       </Grid.Column>
       <Grid.Column>
         <Sidebar.Pushable as={Segment}>

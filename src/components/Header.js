@@ -1,15 +1,17 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Image from "react-bootstrap/Image";
-
-const Header = () => {
+import { Button } from "semantic-ui-react";
+const Header = ({ toggle }) => {
   return (
-    <Container>
-      <Row>
-        <Image src={"shoppies-logo.png"} alt="logo"></Image>
-      </Row>
-    </Container>
+    <div>
+      <img src={"shoppies-logo.png"} alt="logo"></img>
+      <Button
+        color="green"
+        icon="heart"
+        onClick={(e, data) => {
+          toggle();
+        }}
+      />
+    </div>
   );
 };
 
