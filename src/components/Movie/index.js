@@ -29,9 +29,6 @@ const Movie = ({ movies, toggle }) => {
 
   return (
     <div>
-      {movies.length > 0 ? (
-        <p>Showing the top {movies.length} results</p>
-      ) : null}
       <Card.Group centered="true" className="movies">
         {movies.map((movie) => {
           let selected =

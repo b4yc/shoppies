@@ -12,7 +12,7 @@ const Cart = ({ toggle }) => {
   };
 
   return (
-    <div>
+    <div data-testid="cart">
       <Button
         icon
         onClick={toggle}
