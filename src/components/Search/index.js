@@ -16,12 +16,9 @@ const Search = ({ toggle }) => {
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    fetch(
-      `http://www.omdbapi.com/?s=${value}&plot=short&type=movie&apikey=91b0581c`
-    )
+    fetch(`https://www.omdbapi.com/?s=${value}&type=movie&apikey=91b0581c`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setResults(data.Search);
         setIsLoading(false);
       });

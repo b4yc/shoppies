@@ -1,6 +1,6 @@
 {
-  "short_name": "Shoppies",
-  "name": "Nominate your top 5 movies",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,9 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "shoppies-logo.png",
+      "src": "logo192.png",
       "type": "image/png",
-      "sizes": "456x118"
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",

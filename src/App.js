@@ -46,7 +46,6 @@ function App() {
             >
               <Cart toggle={toggleVisible} />
             </Sidebar>
-
             <Sidebar.Pusher dimmed={visible}>
               <div className="App">
                 <Grid>

@@ -6,8 +6,6 @@ export const initializer = (initialValue = initialState) =>
 export const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
-      console.log(state);
-      console.log(action.item);
       return [...state, { ...action.item }];
 
     case "REMOVE_FROM_CART":

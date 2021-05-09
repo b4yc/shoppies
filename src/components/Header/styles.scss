@@ -1,10 +1,16 @@
 .header {
   position: sticky;
-  // display: flex;
-  // flex-direction: row;
+  position: -webkit-sticky;
+  top: 0;
   justify-content: center;
 }
 
 .logo {
-  max-width: 200px;
+  width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 50%;
+  }
 }
