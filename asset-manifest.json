@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shoppies/static/css/main.8c13b76a.chunk.css",
+    "main.css": "/shoppies/static/css/main.00d1e31f.chunk.css",
     "main.js": "/shoppies/static/js/main.83c73a5b.chunk.js",
     "main.js.map": "/shoppies/static/js/main.83c73a5b.chunk.js.map",
     "runtime-main.js": "/shoppies/static/js/runtime-main.bdbde396.js",
@@ -12,7 +12,7 @@
     "static/js/3.3fd7a13e.chunk.js.map": "/shoppies/static/js/3.3fd7a13e.chunk.js.map",
     "index.html": "/shoppies/index.html",
     "static/css/2.d8d91f63.chunk.css.map": "/shoppies/static/css/2.d8d91f63.chunk.css.map",
-    "static/css/main.8c13b76a.chunk.css.map": "/shoppies/static/css/main.8c13b76a.chunk.css.map",
+    "static/css/main.00d1e31f.chunk.css.map": "/shoppies/static/css/main.00d1e31f.chunk.css.map",
     "static/js/2.6a8513b4.chunk.js.LICENSE.txt": "/shoppies/static/js/2.6a8513b4.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/shoppies/static/media/outline-icons.ddae9b1b.woff",
     "static/media/semantic.less": "/shoppies/static/media/semantic.97a8a569.less"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.bdbde396.js",
     "static/css/2.d8d91f63.chunk.css",
     "static/js/2.6a8513b4.chunk.js",
-    "static/css/main.8c13b76a.chunk.css",
+    "static/css/main.00d1e31f.chunk.css",
     "static/js/main.83c73a5b.chunk.js"
   ]
 }
