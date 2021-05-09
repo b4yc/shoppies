@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Form,
-  Button,
-  Pagination,
-  Container,
-  Grid,
-  Divider,
-} from "semantic-ui-react";
+import { Form, Button, Pagination, Container, Grid } from "semantic-ui-react";
 
 import Movie from "../Movie";
 import "./styles.scss";
@@ -59,7 +52,6 @@ const Search = ({ toggle }) => {
               style={{ backgroundColor: "#084c44" }}
             ></Button>
           }
-          actionPosition="right"
           placeholder="Search for a Movie..."
           value={value}
           onChange={handleChange}

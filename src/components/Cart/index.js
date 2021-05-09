@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Icon, Menu } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
 import { CartContext } from "../CartProvider";
 import { clearCart } from "../../cartReducer";
 import Nominations from "../Nominations";
@@ -23,7 +23,7 @@ const Cart = ({ toggle }) => {
       </Button>
       <Divider />
       <Button
-        disabled={cart.length == 0}
+        disabled={cart.length === 0}
         onClick={clearCartHandler}
         style={{ width: "200px", backgroundColor: "#fcfcec" }}
       >

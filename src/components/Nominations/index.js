@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../CartProvider";
 import { removeFromCart } from "../../cartReducer";
-import { Card, Icon, Image, Button } from "semantic-ui-react";
+import { Card, Icon, Button } from "semantic-ui-react";
 
 const Nominations = () => {
   const { cart, dispatch } = useContext(CartContext);

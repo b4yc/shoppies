@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../CartProvider";
 import { addToCart } from "../../cartReducer";
-import { Card, Icon, Image, Button, Modal } from "semantic-ui-react";
+import { Card, Icon, Button, Modal } from "semantic-ui-react";
 import "./styles.scss";
 
 const Movie = ({ movies, toggle }) => {
@@ -10,14 +10,10 @@ const Movie = ({ movies, toggle }) => {
   const [modalMessage, setModalMessage] = useState();
 
   const addToCartHandler = (product) => {
-    if (cart.length == 4) {
-      // alert("Your 5 movies have been nominated!");
+    if (cart.length === 4) {
       setModalMessage("You have successfully nominated 5 movies.");
       setModalOpen(true);
     } else if (cart.length >= 5) {
-      // alert(
-      //   "You have nominated 5 movies already! If you'd like to add another, please remove an existing one."
-      // );
       setModalMessage(
         "You have nominated 5 movies already! If you'd like to add another, please remove an existing one."
       );
@@ -29,16 +25,16 @@ const Movie = ({ movies, toggle }) => {
 
   return (
     <div>
-      <Card.Group centered="true" className="movies">
+      <Card.Group centered className="movies">
         {movies.map((movie) => {
           let selected =
-            cart.filter((item) => item.Title === movie.Title).length > 0;
+            cart.filter((item) => item.imdbID === movie.imdbID).length > 0;
           return (
-            <Card style={{ width: "200px" }}>
+            <Card style={{ width: "200px" }} key={movie.imdbID}>
               {movie.Poster === "N/A" ? (
                 <div className="poster-not-found">Poster not found</div>
               ) : (
-                <img src={movie.Poster} className="poster" />
+                <img src={movie.Poster} className="poster" alt="movie poster" />
               )}
 
               <Card.Content>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Label, Icon, Grid } from "semantic-ui-react";
+import { Button, Icon, Grid } from "semantic-ui-react";
 import "./styles.scss";
 
 const Header = ({ toggle }) => {

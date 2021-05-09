@@ -1,18 +1,7 @@
 import "./App.scss";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "semantic-ui-css/semantic.min.css";
-import {
-  Checkbox,
-  Grid,
-  Icon,
-  Image,
-  Menu,
-  Segment,
-  Sidebar,
-  Button,
-} from "semantic-ui-react";
-import { CartContext } from "./components/CartProvider";
-import { clearCart } from "./cartReducer";
+import { Grid, Menu, Sidebar } from "semantic-ui-react";
 
 // import components
 import Header from "./components/Header";
@@ -20,7 +9,6 @@ import Search from "./components/Search";
 import Cart from "./components/Cart";
 
 function App() {
-  const { cart, dispatch } = useContext(CartContext);
   const [visible, setVisible] = useState(false);
 
   function toggleVisible() {
@@ -41,7 +29,7 @@ function App() {
               onHide={() => setVisible(false)}
               vertical
               visible={visible}
-              width="large"
+              width="wide"
               style={{ backgroundColor: "#084c44" }}
             >
               <Cart toggle={toggleVisible} />
