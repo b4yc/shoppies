@@ -9,30 +9,33 @@ const Nominations = () => {
     dispatch(removeFromCart(itemToRemove));
 
   return (
-    <div>
+    <Card.Group centered>
       {cart.map((nomination) => {
         return (
           <div>
-            <Card.Group>
-              <Card>
-                <Card.Content>
-                  <Card.Header>{nomination.Title}</Card.Header>
-                  <Card.Meta>
-                    <span className="date">{nomination.Year}</span>
-                  </Card.Meta>
-                  <Card.Description>
-                    Matthew is a musician living in Nashville.
-                  </Card.Description>
-                </Card.Content>
-                <Button onClick={() => removeFromCartHandler(nomination)}>
-                  Remove
-                </Button>
-              </Card>
-            </Card.Group>
+            <br />
+            <Card style={{ width: "200px", backgroundColor: "#fcfcec" }}>
+              <Card.Content>
+                <Card.Header>{nomination.Title}</Card.Header>
+                <Card.Meta>
+                  <span className="date">{nomination.Year}</span>
+                </Card.Meta>
+              </Card.Content>
+              <Button
+                animated="vertical"
+                onClick={() => removeFromCartHandler(nomination)}
+                style={{ backgroundColor: "#e6e6d5" }}
+              >
+                <Button.Content hidden>Remove</Button.Content>
+                <Button.Content visible>
+                  <Icon name="trash" />
+                </Button.Content>
+              </Button>
+            </Card>
           </div>
         );
       })}
-    </div>
+    </Card.Group>
   );
 };
 

@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { CartProvider } from "./components/CartProvider";
+import "semantic-ui-less/semantic.less";
 
 ReactDOM.render(
   <React.StrictMode>

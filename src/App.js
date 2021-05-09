@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import React, { useContext, useState } from "react";
 import "semantic-ui-css/semantic.min.css";
 import {
@@ -28,34 +28,43 @@ function App() {
   }
 
   return (
-    <Grid columns={1}>
-      <Grid.Column>
-        <Header toggle={toggleVisible} />
-      </Grid.Column>
-      <Grid.Column>
-        <Sidebar.Pushable as={Segment}>
-          <Sidebar
-            as={Menu}
-            animation="scale down"
-            direction="right"
-            icon="labeled"
-            inverted
-            onHide={() => setVisible(false)}
-            vertical
-            visible={visible}
-            width="thin"
-          >
-            <Cart />
-          </Sidebar>
+    <div>
+      <Grid columns={1}>
+        <Grid.Column>
+          <Sidebar.Pushable>
+            <Sidebar
+              as={Menu}
+              animation="overlay"
+              direction="right"
+              icon="labeled"
+              inverted
+              onHide={() => setVisible(false)}
+              vertical
+              visible={visible}
+              width="large"
+              style={{ backgroundColor: "#084c44" }}
+            >
+              <Cart toggle={toggleVisible} />
+            </Sidebar>
 
-          <Sidebar.Pusher>
-            <Segment basic className="App">
-              <Search />
-            </Segment>
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
-      </Grid.Column>
-    </Grid>
+            <Sidebar.Pusher dimmed={visible}>
+              <div className="App">
+                <Grid>
+                  <Grid.Column>
+                    <Grid.Row>
+                      <Header toggle={toggleVisible} />
+                    </Grid.Row>
+                    <Grid.Row>
+                      <Search toggle={toggleVisible} />
+                    </Grid.Row>
+                  </Grid.Column>
+                </Grid>
+              </div>
+            </Sidebar.Pusher>
+          </Sidebar.Pushable>
+        </Grid.Column>
+      </Grid>
+    </div>
   );
 }
 

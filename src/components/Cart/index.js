@@ -3,9 +3,9 @@ import { Icon, Menu } from "semantic-ui-react";
 import { CartContext } from "../CartProvider";
 import { clearCart } from "../../cartReducer";
 import Nominations from "../Nominations";
-import { Button } from "semantic-ui-react";
+import { Button, Divider } from "semantic-ui-react";
 
-export default function Cart() {
+const Cart = ({ toggle }) => {
   const { cart, dispatch } = useContext(CartContext);
   const clearCartHandler = (item) => {
     dispatch(clearCart(item));
@@ -13,8 +13,26 @@ export default function Cart() {
 
   return (
     <div>
+      <Button
+        icon
+        onClick={toggle}
+        size="huge"
+        style={{ backgroundColor: "inherit", margin: "20px" }}
+      >
+        <Icon name="x" />
+      </Button>
+      <Divider />
+      <Button
+        disabled={cart.length == 0}
+        onClick={clearCartHandler}
+        style={{ width: "200px", backgroundColor: "#fcfcec" }}
+      >
+        Clear All Nominations
+      </Button>
+      <Divider />
       <Nominations />
-      <Button onClick={clearCartHandler}>Clear All Nominations</Button>
     </div>
   );
-}
+};
+
+export default Cart;

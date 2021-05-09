@@ -1,0 +1,22 @@
+p {
+  text-align: center;
+}
+
+.movies {
+  padding-top: 20px;
+}
+
+.poster-not-found {
+  text-align: center;
+  padding-top: 50%;
+  width: 100%;
+  height: 300px;
+  background-color: #fcfcec;
+}
+
+.poster {
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
