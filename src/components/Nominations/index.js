@@ -14,7 +14,10 @@ const Nominations = () => {
         return (
           <div>
             <br />
-            <Card style={{ width: "200px", backgroundColor: "#fcfcec" }}>
+            <Card
+              key={nomination.imdbID}
+              style={{ width: "200px", backgroundColor: "#fcfcec" }}
+            >
               <Card.Content>
                 <Card.Header data-testid="title">
                   {nomination.Title}
