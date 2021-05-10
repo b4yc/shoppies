@@ -14,14 +14,20 @@ const Nominations = () => {
         return (
           <div>
             <br />
-            <Card style={{ width: "200px", backgroundColor: "#fcfcec" }}>
+            <Card
+              key={nomination.imdbID}
+              style={{ width: "200px", backgroundColor: "#fcfcec" }}
+            >
               <Card.Content>
-                <Card.Header>{nomination.Title}</Card.Header>
-                <Card.Meta>
+                <Card.Header data-testid="title">
+                  {nomination.Title}
+                </Card.Header>
+                <Card.Meta data-testid="year">
                   <span className="date">{nomination.Year}</span>
                 </Card.Meta>
               </Card.Content>
               <Button
+                data-testid="remove-button"
                 animated="vertical"
                 onClick={() => removeFromCartHandler(nomination)}
                 style={{ backgroundColor: "#e6e6d5" }}

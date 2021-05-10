@@ -33,7 +33,6 @@ const Search = ({ toggle }) => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setResults(data.Search);
         setIsLoading(false);
       });

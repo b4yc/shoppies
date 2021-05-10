@@ -38,11 +38,10 @@ const Movie = ({ movies, toggle }) => {
               )}
 
               <Card.Content>
-                <Card.Header>{movie.Title}</Card.Header>
-                <Card.Meta>
+                <Card.Header data-testid="title">{movie.Title}</Card.Header>
+                <Card.Meta data-testid="year">
                   <span className="date">{movie.Year}</span>
                 </Card.Meta>
-                <Card.Description>{movie.Plot}</Card.Description>
               </Card.Content>
               <Button
                 animated="vertical"

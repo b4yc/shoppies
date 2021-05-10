@@ -6,11 +6,17 @@ const Header = ({ toggle }) => {
   return (
     <Grid columns={2} className="header">
       <Grid.Column floated="left">
-        <img src={"shoppies-logo.png"} alt="logo" className="logo"></img>
+        <img
+          data-testid="logo"
+          src={"shoppies-logo.png"}
+          alt="logo"
+          className="logo"
+        ></img>
       </Grid.Column>
       <Grid.Column floated="right">
         <div>
           <Button
+            data-testid="nom-button"
             icon
             labelPosition="right"
             animated="vertical"
