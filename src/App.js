@@ -38,10 +38,10 @@ function App() {
               <div className="App">
                 <Grid>
                   <Grid.Column>
-                    <Grid.Row>
+                    <Grid.Row data-testid="header">
                       <Header toggle={toggleVisible} />
                     </Grid.Row>
-                    <Grid.Row>
+                    <Grid.Row data-testid="search">
                       <Search toggle={toggleVisible} />
                     </Grid.Row>
                   </Grid.Column>

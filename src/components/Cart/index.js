@@ -14,6 +14,7 @@ const Cart = ({ toggle }) => {
   return (
     <div data-testid="cart">
       <Button
+        data-testid="close-button"
         icon
         onClick={toggle}
         size="huge"
@@ -23,6 +24,7 @@ const Cart = ({ toggle }) => {
       </Button>
       <Divider />
       <Button
+        data-testid="clear-button"
         disabled={cart.length === 0}
         onClick={clearCartHandler}
         style={{ width: "200px", backgroundColor: "#fcfcec" }}
